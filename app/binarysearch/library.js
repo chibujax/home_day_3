@@ -39,7 +39,7 @@ Array.prototype.search = function (n) {
   };
 
   while (mnSai <= mxSai) {
-    cSai = (mnSai + mxSai) / 2 | 0;  // "|"" Performs faster than Math.floor
+    cSai = (mnSai + mxSai) / 2 | 0;  // "|"" Performs faster than Math.floor check https://jsperf.com/math-floor-vs-math-round-vs-parseint/69
     if (this[mnSai] === n || this[mxSai] === n) {
       if (this[mxSai] === n) {
         search.index = mxSai;
